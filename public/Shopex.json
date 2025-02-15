@@ -1,0 +1,23 @@
+
+[
+    {
+      "img": "../public/Shopex-img/24-hours-support 1.png",
+      "title": "24/7 Support",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida."
+    },
+    {
+      "img": "../public/Shopex-img/cashback 1.png",
+      "title": "24/7 Support",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida."
+    },
+    {
+      "img": "../public/Shopex-img/premium-quality 1.png",
+      "title": "24/7 Support",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida."
+    },
+    {
+        "img": "../public/Shopex-img/24-hours-support 1.png",
+        "title": "24/7 Support",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida."
+      }
+  ]
