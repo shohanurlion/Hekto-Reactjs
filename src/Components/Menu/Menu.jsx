@@ -21,8 +21,8 @@ const Menu = () => {
                         <Link to ="/" onClick={handleLinkClick}>Home</Link>
                         <Link to ="/pages" onClick={handleLinkClick}>Pages</Link>
                         <Link to ="/shoping" onClick={handleLinkClick}>Products</Link>
-                        <Link to ="/blogpage" onClick={handleLinkClick}>Blog</Link>
-                        <Link to ="/shoplist" onClick={handleLinkClick}>Shop</Link>
+                        <Link to ="/blog" onClick={handleLinkClick}>Blog</Link>
+                        <Link to ="/shoping" onClick={handleLinkClick}>Shop</Link>
                         <Link to ="/contact" onClick={handleLinkClick}>Contact</Link>
                     </div>
                 )}

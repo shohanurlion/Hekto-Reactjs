@@ -39,7 +39,7 @@ function Navbar() {
               <Link to="/" className="hover:text-blue-500 transition-colors">Home</Link>
               <Link to="/" className="hover:text-blue-500 transition-colors">Pages</Link>
               <Link to="/products" className="hover:text-blue-500 transition-colors">Products</Link>
-              <Link to="/blogpage" className="hover:text-blue-500 transition-colors">Blog </Link>
+              <Link to="/blog" className="hover:text-blue-500 transition-colors">Blog </Link>
               <Link to="/shoping" className="hover:text-blue-500 transition-colors">Shop</Link>
               <Link to="/contact" className="hover:text-blue-500 transition-colors">Contact</Link>
             </div>

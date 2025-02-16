@@ -8,6 +8,8 @@ import NotFound from "../Page/Not-Found/NotFound";
 import Login from "../Page/Login/Login";
 import Billingcard from "../Page/Billingcard/Billingcard";
 import Shoping from "../Page/Shoping/Shoping";
+import Blogpages from "../Page/Blog/Blogpages/Blogpages";
+import Singleblog from "../Page/Blog/Singleblog/Singleblog";
 
 const router = createBrowserRouter([
     {
@@ -45,8 +47,15 @@ const router = createBrowserRouter([
           {
             path: "shoping",
             element:<Shoping></Shoping>,
+          },
+          {
+            path: "blog",
+            element:<Blogpages></Blogpages>,
+          },
+           {
+            path: "/Singleblog/:id",
+            element:<Singleblog></Singleblog>,
           }
-         
       ],
     },
   ]);

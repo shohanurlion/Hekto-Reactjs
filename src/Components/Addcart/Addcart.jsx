@@ -58,7 +58,7 @@ const Addcart = (item) => {
         </div>
         <div className='' ref={carstikiref}>
                 {cart && 
-                <div className='w-[360px] border-2 border-[#F0F0F0] absolute top-[36px] left-[-315px] lg:left-[85px] z-50'>
+                <div className='w-[360px] border-2 border-[#F0F0F0] absolute top-[98px] sm:top-[36px] left-[-36px] sm:left-[85px] z-50'>
                 {cartinfo.map((item) => (
                   <>
                     <div className=' flex justify-between items-center bg-[#F5F5F3] py-5 px-5'>
