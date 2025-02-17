@@ -8,14 +8,16 @@ import router from './Router/Router';
 import { ContextApi } from './ContextApi/ContextApi';
 import { Provider } from 'react-redux';
 import { store } from './Store';
-
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
+
+   <Provider store={store}>
     <ContextApi>
     <div className=''>
       <RouterProvider router={router} />
     </div>
     </ContextApi>
   </Provider>
+
+ 
   
 )
