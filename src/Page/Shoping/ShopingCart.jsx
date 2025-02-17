@@ -4,6 +4,7 @@ import { ImZoomIn } from "react-icons/im";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../Features/Product/ProductSlice";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const ShopingCart = ({ allpage, cateFilter, brnadFilters }) => {
   const dispatch = useDispatch();
@@ -51,7 +52,9 @@ const ShopingCart = ({ allpage, cateFilter, brnadFilters }) => {
 
           {/* Product Details */}
           <div style={{ flex: 1 }}>
+            <Link to={`/productsdetails/${item.id}`}>
             <h3 style={{ margin: '0 0 8px 0' }} className='text-[18px] text-[#111C85] font-bold'>{item.title}</h3>
+            </Link>
             <p style={{ margin: '0 0 8px 0', color: '#666' }}>{item.description}</p>
 
             {/* Price & Discount */}
