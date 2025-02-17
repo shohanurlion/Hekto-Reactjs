@@ -6,6 +6,7 @@ export const ProductSlice = createSlice({
     cartitem: localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
       : [],
+      wishitem: localStorage.getItem("wish") ? JSON.parse(localStorage.getItem("wish")): []
   },
   reducers: {
     addToCart: (state, action) => {
@@ -37,8 +38,27 @@ export const ProductSlice = createSlice({
   clearCart: (state) => {
     state.cartitem = [];
   },
+  // List
+  wishListAdd: (state, action) => {
+    // Find the product in the wishitem array instead of cartitem
+    const wishlistProductIndex = state.wishitem.findIndex((item) => item.id === action.payload.id);
+  
+    // If the product exists, increment the quantity (if applicable)
+    if (wishlistProductIndex !== -1) {
+      state.wishitem[wishlistProductIndex].qun += 1; 
+      localStorage.setItem("wish", JSON.stringify(state.wishitem));
+    } else {
+      // If the product doesn't exist, add it to the wishlist
+      state.wishitem = [...state.wishitem, action.payload];
+      localStorage.setItem("wish", JSON.stringify(state.wishitem));
+    }
+  },
+  wishLiestremove:(state, action)=>{
+    state.wishitem.splice(action.payload, 1)
+    localStorage.setItem("wish", JSON.stringify(state.wishitem))
+  }
   },
 });
 
-export const { addToCart, productremove, productIncrement, productdecrement, clearCart } = ProductSlice.actions;
+export const { addToCart, productremove, productIncrement, productdecrement, clearCart, wishListAdd, wishLiestremove} = ProductSlice.actions;
 export default ProductSlice.reducer; // এই লাইনে export default হচ্ছে reducer

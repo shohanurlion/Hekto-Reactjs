@@ -10,6 +10,7 @@ import Billingcard from "../Page/Billingcard/Billingcard";
 import Shoping from "../Page/Shoping/Shoping";
 import Blogpages from "../Page/Blog/Blogpages/Blogpages";
 import Singleblog from "../Page/Blog/Singleblog/Singleblog";
+import Wishlist from "../Page/Wishlist/Wishlist";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
            {
             path: "/Singleblog/:id",
             element:<Singleblog></Singleblog>,
+          },
+          {
+            path: "wishlist",
+            element:<Wishlist></Wishlist>,
           }
       ],
     },

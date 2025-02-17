@@ -3,7 +3,7 @@ import { FiShoppingCart, FiZoomIn } from "react-icons/fi";
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../../Features/Product/ProductSlice";
+import { addToCart, wishListAdd } from "../../../Features/Product/ProductSlice";
 import Swal from 'sweetalert2'
 const FeatureCart = ({item}) => {
   const dispatch = useDispatch();
@@ -17,6 +17,16 @@ const FeatureCart = ({item}) => {
       timer: 1500
     });
   }
+  const heartlist = (item) => {
+      dispatch(wishListAdd({ ...item, qun: 1 })); 
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
+  };
   return (
     <>
     <div className="group shadow-md" >
@@ -28,7 +38,7 @@ const FeatureCart = ({item}) => {
                 <FiShoppingCart size={20} />
               </div>
               {/* zoom icon */}
-              <div className="hover:bg-[#EEEFFB] cursor-pointer text-[#2F1AC4] duration-300 ease-linear rounded-full p-2">
+              <div onClick={() => heartlist(item)} className="hover:bg-[#EEEFFB] cursor-pointer text-[#2F1AC4] duration-300 ease-linear rounded-full p-2">
                 <CiHeart size={20} />
               </div>
               {/* Heart icon */}

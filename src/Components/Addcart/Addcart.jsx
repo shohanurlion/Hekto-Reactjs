@@ -9,6 +9,7 @@ import { productremove } from "../../Features/Product/ProductSlice";
 
 const Addcart = (item) => {
     const cartinfo = useSelector((state) => state.product.cartitem);
+    const wishinfo = useSelector((state) => state.product.wishitem)
     const [cart, setcart] = useState(false);
     const cartbox = useRef();
     const carstikiref = useRef();
@@ -46,10 +47,17 @@ const Addcart = (item) => {
             <span className='text-[12px] md:text-[16px] text-[white] font-bold'>Login</span>
             <FaRegUser className='mr-[10px] text-[white] text-[20px] font-bold'/>
         </div>
+        <Link to={'/wishlist'}>
         <div className='flex items-center md:gap-2'>
             <span className='text-[12px] md:text-[16px] text-[white] font-bold'>Wishlist</span>
+            <div className='flex items-center relative cursor-pointer'>
+            {wishinfo.length > 0 ? <div className=' flex items-center justify-center absolute left-[10px] top-[-4px] h-[20px] w-[20px] bg-[#dcc0c0] rounded-full text-[black]'>
+                  {wishinfo.length}
+            </div> : ""}
             <FaRegHeart className='mr-[10px] text-[white] text-[20px] font-bold'/>
         </div>
+        </div>
+        </Link>
         <div className='flex items-center relative cursor-pointer' ref={cartbox}>
             {cartinfo.length > 0 ? <div className=' flex items-center justify-center absolute left-[10px] top-[-4px] h-[20px] w-[20px] bg-[#dcc0c0] rounded-full text-[black]'>
                   {cartinfo.length}
